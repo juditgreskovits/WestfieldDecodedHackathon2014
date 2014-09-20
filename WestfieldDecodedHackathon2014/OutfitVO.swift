@@ -1,5 +1,5 @@
 //
-//  OutfitModel.swift
+//  OutfitVO.swift
 //  WestfieldDecodedHackathon2014
 //
 //  Created by JUDIT GRESKOVITS on 20/09/2014.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Outfit {
+class OutfitVO {
     
     let store = "Desigual"
     let imagePath = "image.jpg"

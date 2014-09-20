@@ -10,8 +10,6 @@ import UIKit
 
 class MyColoursViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let categories = ["basics", "relaxing", "dramatic"]
-    
     let kCellIdentifier: String = "CategoryColoursCell"
 
     override func viewDidLoad() {
@@ -45,7 +43,7 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as UITableViewCell
         
-        let category = categories[indexPath.row] // myColoursModel.getCategories()[indexPath.row]
+        let category = MyColoursModel.instance.categories[indexPath.row] // myColoursModel.getCategories()[indexPath.row]
         cell.textLabel?.text = category.capitalizedString
         cell.detailTextLabel?.text = "Colours for my " + category + " outfits"
         
@@ -70,7 +68,7 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // Get the row data for the selected row
-        var selectedCategory: String = self.categories[indexPath.row] as String
+        var selectedCategory: String = MyColoursModel.instance.categories[indexPath.row] as String
         
         /*var alert: UIAlertView = UIAlertView()
         alert.title = "category"
@@ -81,7 +79,7 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         // TODO set the selected category to our model
         // Request the results page!
         
-        println(MyColoursModel.instance.getCategories());
+        println(MyColoursModel.instance.categories);
         
         let myOutfitsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("myOutfitsViewController") as MyOutfitsViewController
         self.navigationController?.pushViewController(myOutfitsViewController, animated: true)
