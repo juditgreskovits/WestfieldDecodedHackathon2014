@@ -11,6 +11,12 @@ import UIKit
 class MyColoursViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let categories = ["basics", "relaxing", "dramatic"]
+    
+    let kCellIdentifier: String = "CategoryColoursCell"
+    
+    var testVariable: String? = nil
+    
+    var myColoursModel: MyColoursModel? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +45,13 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCategoryColours")
+        // let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCategoryColours")
         
-        cell.textLabel?.text = categories[indexPath.row].capitalizedString
-        cell.detailTextLabel?.text = "Colours for my " + categories[indexPath.row] + "outfits"
+        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as UITableViewCell
+        
+        let category = categories[indexPath.row] // myColoursModel.getCategories()[indexPath.row]
+        cell.textLabel?.text = category.capitalizedString
+        cell.detailTextLabel?.text = "Colours for my " + category + " outfits"
         
         println(cell.textLabel?.text);
         
@@ -61,6 +70,25 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         let targetWidth = self.view.frame.width
         
         return targetWidth
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // Get the row data for the selected row
+        var selectedCategory: String = self.categories[indexPath.row] as String
+        
+        /*var alert: UIAlertView = UIAlertView()
+        alert.title = "category"
+        alert.message = selectedCategory
+        alert.addButtonWithTitle("Ok")
+        alert.show()*/
+        
+        // TODO set the selected category to our model
+        // Request the results page!
+        
+        println(myColoursModel);
+        
+        let myOutfitsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("myOutfitsViewController") as MyOutfitsViewController
+        self.navigationController?.pushViewController(myOutfitsViewController, animated: true)
     }
     
 
