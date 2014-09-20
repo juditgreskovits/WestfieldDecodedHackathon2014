@@ -15,6 +15,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func myColoursButtonTouchUp(sender: AnyObject) {
+        let myColoursViewController = self.storyboard?.instantiateViewControllerWithIdentifier("myColoursViewController") as MyColoursViewController
+        self.navigationController?.pushViewController(myColoursViewController, animated: true)
+    }
+    
+    @IBAction func chooseMyColoursButtonTouchUp(sender: AnyObject) {
+        let chooseMyColoursViewController = self.storyboard?.instantiateViewControllerWithIdentifier("chooseMyColoursViewController") as ChooseMyColoursViewController
+        self.navigationController?.pushViewController(chooseMyColoursViewController, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
