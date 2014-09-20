@@ -14,6 +14,8 @@ class MyOutfitsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        println(MyColoursModel.instance.getOutfits())
     }
 
     override func didReceiveMemoryWarning() {

@@ -15,9 +15,14 @@ class MyColoursModel {
     }
     
     let categories = ["basics", "relaxing", "dramatic"]
+    var outfits = [Outfit(), Outfit(), Outfit()]
     
     func getCategories() -> Array<String> {
         return categories
+    }
+    
+    func getOutfits() -> Array<Outfit> {
+        return outfits
     }
 }
 
