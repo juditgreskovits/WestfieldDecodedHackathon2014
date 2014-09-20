@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, MycoloursModelDelegate  {
+class ViewController: UIViewController  {
     
     let myColoursModel = MyColoursModel()
 
@@ -39,23 +39,5 @@ class ViewController: UIViewController, MycoloursModelDelegate  {
     func getCategories() -> Array<String> {
         return myColoursModel.getCategories()
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        let controller = segue.destinationViewController as MyColoursViewController
-        controller.testVariable = "Hello"
-    }
-    
-    
-    
-    /*override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!){
-        if segue.identifier == "editOrder" {
-            var vc = segue.destinationViewController as EditPizzaViewController
-            let orderNumber = orderNumberText.text.toInt()!
-            vc.pizza = pizzaOrder.getPizzaOrder(orderNumber)
-            vc.orderNumber = orderNumber
-            vc.delegate = self
-        }
-    }*/
-
 }
 

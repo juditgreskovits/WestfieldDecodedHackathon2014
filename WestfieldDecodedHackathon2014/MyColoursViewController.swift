@@ -13,10 +13,6 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
     let categories = ["basics", "relaxing", "dramatic"]
     
     let kCellIdentifier: String = "CategoryColoursCell"
-    
-    var testVariable: String? = nil
-    
-    var myColoursModel: MyColoursModel? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +81,7 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         // TODO set the selected category to our model
         // Request the results page!
         
-        println(myColoursModel);
+        println(MyColoursModel.instance.getCategories());
         
         let myOutfitsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("myOutfitsViewController") as MyOutfitsViewController
         self.navigationController?.pushViewController(myOutfitsViewController, animated: true)

@@ -10,9 +10,15 @@ import Foundation
 
 class MyColoursModel {
     
+    class var instance:MyColoursModel {
+        return MyColoursModelInstance
+    }
+    
     let categories = ["basics", "relaxing", "dramatic"]
     
     func getCategories() -> Array<String> {
         return categories
     }
 }
+
+let MyColoursModelInstance = MyColoursModel()
