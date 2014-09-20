@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let beaconIdentifier = "MyColours"
         let beaconUUID:NSUUID = NSUUID(UUIDString: uuidString)
         let beaconRegion:CLBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID, identifier: beaconIdentifier)
-        
+ 
         locationManager = CLLocationManager()
         if(locationManager!.respondsToSelector("requestAlwaysAuthorization")){
             locationManager!.requestAlwaysAuthorization()
@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         locationManager!.startMonitoringForRegion(beaconRegion)
         locationManager!.startRangingBeaconsInRegion(beaconRegion)
         locationManager!.startUpdatingLocation()
-        
+
         if application.respondsToSelector("registerUserNotificationSettings") {
             application.registerUserNotificationSettings(
                 UIUserNotificationSettings(
@@ -49,12 +49,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    /*
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
-    return true
-    }
-    */
+//    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+//    // Override point for customization after application launch.
+//    return true
+//    }
+//    
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -155,12 +154,12 @@ extension AppDelegate: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager!,
         didRangeBeacons beacons: [AnyObject]!,
         inRegion region: CLBeaconRegion!) {
-            NSLog("didRangeBeacons")
+//            NSLog("didRangeBeacons")
             var message:String = "";
             
-            let viewController:ViewController = window!.rootViewController as ViewController
-            //            viewController.beacons = beacons as [CLBeacon]?
-            //            viewController.tableView!.reloadData()
+//            let viewController:ViewController = window!.rootViewController as ViewController
+//                        viewController.beacons = beacons as [CLBeacon]?
+//                        viewController.tableView!.reloadData()
             
             if(beacons.count > 0) {
                 let nearestBeacon:CLBeacon = beacons[0] as CLBeacon
@@ -171,11 +170,10 @@ extension AppDelegate: CLLocationManagerDelegate {
                 
                 switch nearestBeacon.proximity {
                 case CLProximity.Far:
-                    message = "You are far away from the beacon"
-                case CLProximity.Near:
-                    message = "You are near the beacon"
+                    message = "You are far away from beacon " + nearestBeacon.minor.stringValue                 case CLProximity.Near:
+                    message = "You are near beacon " + nearestBeacon.minor.stringValue
                 case CLProximity.Immediate:
-                    message = "You are in the immediate proximity of hte beacon"
+                    message = "You are in the immediate proximity of beacon " + nearestBeacon.minor.stringValue
                 case CLProximity.Unknown:
                     return
                 }
