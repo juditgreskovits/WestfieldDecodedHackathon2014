@@ -46,7 +46,13 @@ class MyColoursModel {
     func getColours() -> Dictionary<String, Array<UIColor>> {
         // TODO update this once we select colours
         return colours0
-   }
+    }
+    
+    func getColour(category:String, index:Int) -> UIColor {
+        var colours : Array<UIColor>! = getColours()[category] as Array<UIColor>?
+        var colour = colours[index]
+        return colour
+    }
     
     func getOutfits() -> Array<OutfitVO> {
         

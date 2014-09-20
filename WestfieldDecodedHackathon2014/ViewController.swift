@@ -25,6 +25,11 @@ class ViewController: UIViewController  {
         self.navigationController?.pushViewController(chooseMyColoursViewController, animated: true)
     }
     
+    @IBAction func mapButtonTouchUp(sender: AnyObject) {
+        let mapViewController = self.storyboard?.instantiateViewControllerWithIdentifier("mapViewController") as MapViewController
+        self.navigationController?.pushViewController(mapViewController, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

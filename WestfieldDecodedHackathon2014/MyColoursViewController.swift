@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class MyColoursViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let kCellIdentifier: String = "CategoryColoursCell"
@@ -38,6 +39,12 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         cell.textLabel?.text = category.capitalizedString
         cell.detailTextLabel?.text = "Colours for my " + category + " outfits"
         
+        var colour = MyColoursModel.instance.getColour(category, index: 2)
+        println(colour)
+        let image = createSwatch(colour)
+        
+        cell.imageView?.image = image
+        
         println(cell.textLabel?.text);
         
         return cell
@@ -65,6 +72,27 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         
         let myOutfitsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("myOutfitsViewController") as MyOutfitsViewController
         self.navigationController?.pushViewController(myOutfitsViewController, animated: true)
+    }
+    
+    func createSwatch(colour:UIColor) -> UIImage {
+        
+        let rect = CGRectMake(0, 0, 100, 100)
+        
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: rect.width, height: rect.height), true, 0)
+        
+        let context = UIGraphicsGetCurrentContext()
+        
+        println(colour.CGColor)
+        
+        CGContextSetFillColorWithColor(context, colour.CGColor)
+        
+        CGContextFillRect(context, rect)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        
+        return image
     }
     
 
