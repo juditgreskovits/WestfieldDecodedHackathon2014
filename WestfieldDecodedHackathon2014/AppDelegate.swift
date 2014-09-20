@@ -167,15 +167,13 @@ extension AppDelegate: CLLocationManagerDelegate {
                     return
                 }
                 lastProximity = nearestBeacon.proximity
-                let beaconID: String = nearestBeacon.minor.stringValue
                 
                 switch nearestBeacon.proximity {
                 case CLProximity.Far:
-                    message = "You are far away from the beacon " + beaconID
-                case CLProximity.Near:
-                    message = "You are near the beacon " + beaconID
+                    message = "You are far away from beacon " + nearestBeacon.minor.stringValue                 case CLProximity.Near:
+                    message = "You are near beacon " + nearestBeacon.minor.stringValue
                 case CLProximity.Immediate:
-                    message = "You are in the immediate proximity of the beacon " + beaconID
+                    message = "You are in the immediate proximity of beacon " + nearestBeacon.minor.stringValue
                 case CLProximity.Unknown:
                     return
                 }
