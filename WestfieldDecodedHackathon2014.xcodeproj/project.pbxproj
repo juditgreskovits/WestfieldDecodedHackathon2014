@@ -19,7 +19,6 @@
 		19D329BD19CDC41400F6B927 /* ChooseMyColoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D329BC19CDC41400F6B927 /* ChooseMyColoursViewController.swift */; };
 		19D329C119CDEF4100F6B927 /* MyColoursModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D329C019CDEF4100F6B927 /* MyColoursModel.swift */; };
 		19D329C719CE134300F6B927 /* OutfitVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D329C619CE134300F6B927 /* OutfitVO.swift */; };
-		19D329C919CE195400F6B927 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D329C819CE195400F6B927 /* UIColorExtension.swift */; };
 		726468CF19CDC7B7005F1705 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726468CE19CDC7B7005F1705 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +49,6 @@
 		19D329BC19CDC41400F6B927 /* ChooseMyColoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseMyColoursViewController.swift; sourceTree = "<group>"; };
 		19D329C019CDEF4100F6B927 /* MyColoursModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColoursModel.swift; sourceTree = "<group>"; };
 		19D329C619CE134300F6B927 /* OutfitVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutfitVO.swift; sourceTree = "<group>"; };
-		19D329C819CE195400F6B927 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		726468CE19CDC7B7005F1705 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -107,7 +105,6 @@
 				19D329BC19CDC41400F6B927 /* ChooseMyColoursViewController.swift */,
 				19D329C019CDEF4100F6B927 /* MyColoursModel.swift */,
 				19D329C619CE134300F6B927 /* OutfitVO.swift */,
-				19D329C819CE195400F6B927 /* UIColorExtension.swift */,
 			);
 			path = WestfieldDecodedHackathon2014;
 			sourceTree = "<group>";
@@ -247,7 +244,6 @@
 				19D329BB19CDC31F00F6B927 /* MyOutfitsViewController.swift in Sources */,
 				19D329C719CE134300F6B927 /* OutfitVO.swift in Sources */,
 				19D3299B19CDB93C00F6B927 /* ViewController.swift in Sources */,
-				19D329C919CE195400F6B927 /* UIColorExtension.swift in Sources */,
 				19D3299619CDB93C00F6B927 /* AppDelegate.swift in Sources */,
 				19D329C119CDEF4100F6B927 /* MyColoursModel.swift in Sources */,
 				19D3299919CDB93C00F6B927 /* WestfieldDecodedHackathon2014.xcdatamodeld in Sources */,

@@ -18,17 +18,22 @@ class MyColoursModel {
     
     let categories = ["formal", "casual", "wow"]
     
-    let colours0 = ["formal":[], "casual":[], "wow":[]]
-    let colours1 = ["formal":[], "casual":[], "wow":[]]
+    let colours0 = ["formal":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)], "casual":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)], "wow":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)]]
+    let colours1 = ["formal":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)], "casual":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)], "wow":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)]]
     
-    var selectedColours:Dictionary<String, Array<AnyObject>>?
+    var selectedColours:Dictionary<String, Array<UIColor>>?
     var selectedCategory:String?
     var selectedOutfits:Array<OutfitVO>!
     var selectedOutfit:OutfitVO?
     
     func selectColours(index:Int) {
-        let colours = [colours0, colours1]
-        selectedColours = colours[index]
+        //let colours = [colours0, colours1]
+        if(index == 0) {
+            selectedColours = colours0
+        }
+        else {
+            selectedColours = colours1
+        }
     }
     
     func selectCategory(category:String) {
@@ -37,6 +42,11 @@ class MyColoursModel {
         println(selectedCategory)
         UIColor.initWithRGBHex(0xFFFFFF)
     }
+    
+    func getColours() -> Dictionary<String, Array<UIColor>> {
+        // TODO update this once we select colours
+        return colours0
+   }
     
     func getOutfits() -> Array<OutfitVO> {
         

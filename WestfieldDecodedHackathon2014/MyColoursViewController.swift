@@ -17,15 +17,6 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
 
         // Do any additional setup after loading the view.
         
-        /*for category in categories {
-            // let image = UIImage(named: "name") as UIImage
-            let button   = UIButton.buttonWithType(UIButtonType.System) as UIButton
-            button.frame = CGRectMake(100, 100, 100, 100)
-            // button.setImage(image, forState: .Normal)
-            button.addTarget(self, action: "btnTouched:", forControlEvents:.TouchUpInside)
-            self.view.addSubview(button)
-        }*/
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,17 +60,8 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // Get the row data for the selected row
         var selectedCategory: String = MyColoursModel.instance.categories[indexPath.row] as String
-        
-        /*var alert: UIAlertView = UIAlertView()
-        alert.title = "category"
-        alert.message = selectedCategory
-        alert.addButtonWithTitle("Ok")
-        alert.show()*/
-        
-        // TODO set the selected category to our model
-        // Request the results page!
-        
-        println(MyColoursModel.instance.categories);
+        println(selectedCategory)
+        MyColoursModel.instance.selectCategory(selectedCategory)
         
         let myOutfitsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("myOutfitsViewController") as MyOutfitsViewController
         self.navigationController?.pushViewController(myOutfitsViewController, animated: true)
