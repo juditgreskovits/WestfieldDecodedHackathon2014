@@ -411,6 +411,7 @@
 				19D329B419CDB93C00F6B927 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19D329B519CDB93C00F6B927 /* Build configuration list for PBXNativeTarget "WestfieldDecodedHackathon2014Tests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				19D329B719CDB93C00F6B927 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
