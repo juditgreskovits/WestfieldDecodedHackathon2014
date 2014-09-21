@@ -21,7 +21,7 @@ class MyColoursModel {
     
     let categories = ["formal", "casual", "wow"]
     
-    let colours0 = ["formal":[UIColor.initWithRGBHex(0x158194), UIColor.initWithRGBHex(0x006391), UIColor.initWithRGBHex(0x724d0d)], "casual":[UIColor.initWithRGBHex(0xaf940f), UIColor.initWithRGBHex(0x5d6733),UIColor.initWithRGBHex(0x8ad2ba)], "wow":[UIColor.initWithRGBHex(0xf1e451), UIColor.initWithRGBHex(0xc50417), UIColor.initWithRGBHex(0xd61eb1)]]
+    let colours0 = ["formal":[UIColor.initWithRGBHex(0x158194), UIColor.initWithRGBHex(0x006391), UIColor.initWithRGBHex(0x1d1336)], "casual":[UIColor.initWithRGBHex(0xaf940f), UIColor.initWithRGBHex(0x5d6733),UIColor.initWithRGBHex(0x5e2c2f)], "wow":[UIColor.initWithRGBHex(0xf1e451), UIColor.initWithRGBHex(0xd61eb1), UIColor.initWithRGBHex(0xc50417)]]
     let colours1 = ["formal":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)], "casual":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)], "wow":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)]]
     
     var selectedColours:Dictionary<String, Array<UIColor>>?

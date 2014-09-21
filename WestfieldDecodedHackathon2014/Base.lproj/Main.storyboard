@@ -186,13 +186,13 @@
                                                 <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIv-Xh-Bt2">
                                                     <rect key="frame" x="0.0" y="-1" width="210" height="339"/>
                                                 </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Show me where >" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SUL-gu-RRk">
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Show me where >" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SUL-gu-RRk">
                                                     <rect key="frame" x="190" y="297" width="122" height="30"/>
                                                     <color key="textColor" red="0.1006160826" green="0.37266410169999997" blue="0.59001358699999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Store" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qf9-7R-TyS">
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Store" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qf9-7R-TyS">
                                                     <rect key="frame" x="190" y="275" width="120" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
