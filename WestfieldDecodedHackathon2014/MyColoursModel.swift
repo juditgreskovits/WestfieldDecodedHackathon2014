@@ -14,12 +14,14 @@ class MyColoursModel {
         return MyColoursModelInstance
     }
     
-    var outfits = [OutfitVO(_image: "outfit_formal0", _store:"Karen Millen"), OutfitVO(_image: "outfit_formal1", _store:"All Saints"), OutfitVO(_image: "outfit_formal2", _store:"Karen Millen"), OutfitVO(_image: "outfit_formal3", _store:"Karen Millen"), OutfitVO(_image: "outfit_formal4", _store:"All Saints"), OutfitVO(_image: "outfit_formal5", _store:"Karen Millen"), OutfitVO(_image: "outfit_formal6", _store:"Desigual"), OutfitVO(_image: "outfit_formal7", _store:"Karen Millen")]
+    var formalOutfits = [OutfitVO(_image: "formal0", _store:"Karen Millen"), OutfitVO(_image: "formal1", _store:"All Saints")]
+    var casualOutfits = [OutfitVO(_image: "casual0", _store:"Karen Millen"), OutfitVO(_image: "casual1", _store:"Karen Millen"), OutfitVO(_image: "casual2", _store:"All Saints")]
+    var wowOutfits = [OutfitVO(_image: "wow0", _store:"Karen Millen"), OutfitVO(_image: "wow1", _store:"Desigual")]
     
     
     let categories = ["formal", "casual", "wow"]
     
-    let colours0 = ["formal":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)], "casual":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)], "wow":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)]]
+    let colours0 = ["formal":[UIColor.initWithRGBHex(0x158194), UIColor.initWithRGBHex(0x006391), UIColor.initWithRGBHex(0x724d0d)], "casual":[UIColor.initWithRGBHex(0xaf940f), UIColor.initWithRGBHex(0x5d6733),UIColor.initWithRGBHex(0x8ad2ba)], "wow":[UIColor.initWithRGBHex(0xf1e451), UIColor.initWithRGBHex(0xc50417), UIColor.initWithRGBHex(0xd61eb1)]]
     let colours1 = ["formal":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)], "casual":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)], "wow":[UIColor.initWithRGBHex(0xCCCCCC), UIColor.initWithRGBHex(0x999999), UIColor.initWithRGBHex(0x666666)]]
     
     var selectedColours:Dictionary<String, Array<UIColor>>?
@@ -56,8 +58,16 @@ class MyColoursModel {
     }
     
     func getOutfits() -> Array<OutfitVO> {
-        selectedOutfits = []
-        selectedOutfits = outfits
+        
+        if(selectedCategory == "formal") {
+            selectedOutfits = formalOutfits
+        }
+        else if(selectedCategory == "casual") {
+            selectedOutfits = casualOutfits
+        }
+        else if(selectedCategory == "wow") {
+            selectedOutfits = wowOutfits
+        }
         
         return selectedOutfits
     }

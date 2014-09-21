@@ -10,6 +10,14 @@
 		1949620919CE40EA0010A549 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1949620819CE40EA0010A549 /* MapViewController.swift */; };
 		1949620F19CE67ED0010A549 /* 103DT08394.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949620E19CE67ED0010A549 /* 103DT08394.png */; };
 		1949621119CE67FA0010A549 /* 104DT02906.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949621019CE67FA0010A549 /* 104DT02906.png */; };
+		1949621319CEE3AA0010A549 /* MyBeaconIDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1949621219CEE3AA0010A549 /* MyBeaconIDModel.swift */; };
+		1949622B19CEF3800010A549 /* Casual_Millen_FluidShirtDress.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949622419CEF3800010A549 /* Casual_Millen_FluidShirtDress.png */; };
+		1949622C19CEF3800010A549 /* Casual_Millen_LeatherBiker_450.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949622519CEF3800010A549 /* Casual_Millen_LeatherBiker_450.png */; };
+		1949622D19CEF3800010A549 /* Casual_Millen_LongLineGilet_.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949622619CEF3800010A549 /* Casual_Millen_LongLineGilet_.png */; };
+		1949622E19CEF3800010A549 /* Formal_Millen_DippedHemJumper_75.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949622719CEF3800010A549 /* Formal_Millen_DippedHemJumper_75.png */; };
+		1949622F19CEF3800010A549 /* Formal_Millen_TailoredDressShirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949622819CEF3800010A549 /* Formal_Millen_TailoredDressShirt.png */; };
+		1949623019CEF3800010A549 /* Wow_Millen_CowlNeckJumper_115.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949622919CEF3800010A549 /* Wow_Millen_CowlNeckJumper_115.png */; };
+		1949623119CEF3800010A549 /* Wow_Millen_SuedeBikerJacket_499_c50417.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949622A19CEF3800010A549 /* Wow_Millen_SuedeBikerJacket_499_c50417.png */; };
 		19D3299619CDB93C00F6B927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3299519CDB93C00F6B927 /* AppDelegate.swift */; };
 		19D3299919CDB93C00F6B927 /* WestfieldDecodedHackathon2014.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19D3299719CDB93C00F6B927 /* WestfieldDecodedHackathon2014.xcdatamodeld */; };
 		19D3299B19CDB93C00F6B927 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3299A19CDB93C00F6B927 /* ViewController.swift */; };
@@ -41,6 +49,14 @@
 		1949620819CE40EA0010A549 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1949620E19CE67ED0010A549 /* 103DT08394.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 103DT08394.png; sourceTree = "<group>"; };
 		1949621019CE67FA0010A549 /* 104DT02906.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 104DT02906.png; sourceTree = "<group>"; };
+		1949621219CEE3AA0010A549 /* MyBeaconIDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBeaconIDModel.swift; sourceTree = "<group>"; };
+		1949622419CEF3800010A549 /* Casual_Millen_FluidShirtDress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Casual_Millen_FluidShirtDress.png; sourceTree = "<group>"; };
+		1949622519CEF3800010A549 /* Casual_Millen_LeatherBiker_450.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Casual_Millen_LeatherBiker_450.png; sourceTree = "<group>"; };
+		1949622619CEF3800010A549 /* Casual_Millen_LongLineGilet_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Casual_Millen_LongLineGilet_.png; sourceTree = "<group>"; };
+		1949622719CEF3800010A549 /* Formal_Millen_DippedHemJumper_75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Formal_Millen_DippedHemJumper_75.png; sourceTree = "<group>"; };
+		1949622819CEF3800010A549 /* Formal_Millen_TailoredDressShirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Formal_Millen_TailoredDressShirt.png; sourceTree = "<group>"; };
+		1949622919CEF3800010A549 /* Wow_Millen_CowlNeckJumper_115.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wow_Millen_CowlNeckJumper_115.png; sourceTree = "<group>"; };
+		1949622A19CEF3800010A549 /* Wow_Millen_SuedeBikerJacket_499_c50417.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wow_Millen_SuedeBikerJacket_499_c50417.png; sourceTree = "<group>"; };
 		19D3299019CDB93C00F6B927 /* WestfieldDecodedHackathon2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestfieldDecodedHackathon2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D3299419CDB93C00F6B927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19D3299519CDB93C00F6B927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +132,7 @@
 				19D329C019CDEF4100F6B927 /* MyColoursModel.swift */,
 				19D329C619CE134300F6B927 /* OutfitVO.swift */,
 				1949620819CE40EA0010A549 /* MapViewController.swift */,
+				1949621219CEE3AA0010A549 /* MyBeaconIDModel.swift */,
 			);
 			path = WestfieldDecodedHackathon2014;
 			sourceTree = "<group>";
@@ -123,6 +140,13 @@
 		19D3299319CDB93C00F6B927 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1949622419CEF3800010A549 /* Casual_Millen_FluidShirtDress.png */,
+				1949622519CEF3800010A549 /* Casual_Millen_LeatherBiker_450.png */,
+				1949622619CEF3800010A549 /* Casual_Millen_LongLineGilet_.png */,
+				1949622719CEF3800010A549 /* Formal_Millen_DippedHemJumper_75.png */,
+				1949622819CEF3800010A549 /* Formal_Millen_TailoredDressShirt.png */,
+				1949622919CEF3800010A549 /* Wow_Millen_CowlNeckJumper_115.png */,
+				1949622A19CEF3800010A549 /* Wow_Millen_SuedeBikerJacket_499_c50417.png */,
 				1949621019CE67FA0010A549 /* 104DT02906.png */,
 				1949620E19CE67ED0010A549 /* 103DT08394.png */,
 				726468D819CE6572005F1705 /* crap.png */,
@@ -235,10 +259,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				726468D919CE6572005F1705 /* crap.png in Resources */,
+				1949622E19CEF3800010A549 /* Formal_Millen_DippedHemJumper_75.png in Resources */,
+				1949622B19CEF3800010A549 /* Casual_Millen_FluidShirtDress.png in Resources */,
 				1949620F19CE67ED0010A549 /* 103DT08394.png in Resources */,
+				1949623119CEF3800010A549 /* Wow_Millen_SuedeBikerJacket_499_c50417.png in Resources */,
+				1949623019CEF3800010A549 /* Wow_Millen_CowlNeckJumper_115.png in Resources */,
 				19D3299E19CDB93C00F6B927 /* Main.storyboard in Resources */,
 				726468D719CE4DE3005F1705 /* Default-568h@2x.png in Resources */,
+				1949622F19CEF3800010A549 /* Formal_Millen_TailoredDressShirt.png in Resources */,
 				1949621119CE67FA0010A549 /* 104DT02906.png in Resources */,
+				1949622D19CEF3800010A549 /* Casual_Millen_LongLineGilet_.png in Resources */,
+				1949622C19CEF3800010A549 /* Casual_Millen_LeatherBiker_450.png in Resources */,
 				19D329A319CDB93C00F6B927 /* LaunchScreen.xib in Resources */,
 				19D329A019CDB93C00F6B927 /* Images.xcassets in Resources */,
 			);
@@ -260,6 +291,7 @@
 			files = (
 				19D329B919CDBE2D00F6B927 /* MyColoursViewController.swift in Sources */,
 				19D329BD19CDC41400F6B927 /* ChooseMyColoursViewController.swift in Sources */,
+				1949621319CEE3AA0010A549 /* MyBeaconIDModel.swift in Sources */,
 				19D329BB19CDC31F00F6B927 /* MyOutfitsViewController.swift in Sources */,
 				19D329C719CE134300F6B927 /* OutfitVO.swift in Sources */,
 				1949620919CE40EA0010A549 /* MapViewController.swift in Sources */,

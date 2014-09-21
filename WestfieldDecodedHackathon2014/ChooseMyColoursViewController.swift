@@ -10,11 +10,13 @@ import UIKit
 import AVFoundation
 import MobileCoreServices
 
-class ChooseMyColoursViewController: UIViewController {
+class ChooseMyColoursViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     let captureSession = AVCaptureSession()
     var previewLayer : AVCaptureVideoPreviewLayer?
     var captureDevice : AVCaptureDevice?
+    
+    let detector = CIDetector(ofType:CIDetectorTypeFace, context:nil, options:[CIDetectorAccuracy:CIDetectorAccuracyHigh, CIDetectorSmile:true, CIDetectorEyeBlink:true])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,9 +68,53 @@ class ChooseMyColoursViewController: UIViewController {
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         self.view.layer.insertSublayer(previewLayer, atIndex:0)
         previewLayer?.frame = self.view.layer.frame
+        
+        /*let output = AVCaptureVideoDataOutput()
+        let cameraQueue = dispatch_queue_create("cameraQueue", DISPATCH_QUEUE_SERIAL)
+        output.setSampleBufferDelegate(self, queue: cameraQueue)
+        output.videoSettings = [kCVPixelBufferPixelFormatTypeKey: kCVPixelFormatType_32BGRA]
+        captureSession.addOutput(output)*/
+        
         captureSession.startRunning()
+        
+        /*dispatch_after(200, dispatch_get_main_queue(), {
+            self.captureSession.stopRunning()
+            self.navigateToMyColoursViewController()
+        })*/
     }
     
+    func navigateToMyColoursViewController() {
+        let myColoursViewController = self.storyboard?.instantiateViewControllerWithIdentifier("myColoursViewController") as MyColoursViewController
+        self.navigationController?.pushViewController(myColoursViewController, animated: true)
+    }
+    
+    /*func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {
+        // println("buffer")
+        let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
+        CVPixelBufferLockBaseAddress(imageBuffer, 0)
+        
+        let baseAddress = CVPixelBufferGetBaseAddressOfPlane(imageBuffer, 0)
+        let bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer)
+        let width = CVPixelBufferGetWidth(imageBuffer)
+        let height = CVPixelBufferGetHeight(imageBuffer)
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        
+        var bitmapInfo = CGBitmapInfo.fromRaw(CGImageAlphaInfo.PremultipliedFirst.toRaw())! | CGBitmapInfo.ByteOrder32Little
+        
+        let context = CGBitmapContextCreate(baseAddress, width, height, 8, bytesPerRow, colorSpace, bitmapInfo)
+        let imageRef = CGBitmapContextCreateImage(context)
+        
+        CVPixelBufferUnlockBaseAddress(imageBuffer, 0)
+        
+        var cImage = CIImage(CGImage:imageRef)
+        
+        let results:NSArray = detector.featuresInImage(cImage)
+        // println(results.count)
+        for r in results {
+            let face:CIFaceFeature = r as CIFaceFeature;
+            NSLog("Face found at (%f,%f) of dimensions %fx%f", face.bounds.origin.x, face.bounds.origin.y, face.bounds.width, face.bounds.height)
+        }
+    }*/
 
     /*
     // MARK: - Navigation
