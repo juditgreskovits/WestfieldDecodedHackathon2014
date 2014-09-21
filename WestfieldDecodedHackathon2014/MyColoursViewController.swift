@@ -55,7 +55,7 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         
         let targetHeight = self.view.frame.height/3
         
-        return targetHeight
+        return 168
     }
     
     func tableView(tableView: UITableView, widthForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
