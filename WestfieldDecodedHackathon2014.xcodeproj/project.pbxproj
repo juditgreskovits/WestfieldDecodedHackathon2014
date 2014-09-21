@@ -18,6 +18,7 @@
 		1949622F19CEF3800010A549 /* Formal_Millen_TailoredDressShirt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949622819CEF3800010A549 /* Formal_Millen_TailoredDressShirt.png */; };
 		1949623019CEF3800010A549 /* Wow_Millen_CowlNeckJumper_115.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949622919CEF3800010A549 /* Wow_Millen_CowlNeckJumper_115.png */; };
 		1949623119CEF3800010A549 /* Wow_Millen_SuedeBikerJacket_499_c50417.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949622A19CEF3800010A549 /* Wow_Millen_SuedeBikerJacket_499_c50417.png */; };
+		1949623319CEFDFD0010A549 /* colour-swatches.png in Resources */ = {isa = PBXBuildFile; fileRef = 1949623219CEFDFD0010A549 /* colour-swatches.png */; };
 		19D3299619CDB93C00F6B927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3299519CDB93C00F6B927 /* AppDelegate.swift */; };
 		19D3299919CDB93C00F6B927 /* WestfieldDecodedHackathon2014.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19D3299719CDB93C00F6B927 /* WestfieldDecodedHackathon2014.xcdatamodeld */; };
 		19D3299B19CDB93C00F6B927 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3299A19CDB93C00F6B927 /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 		1949622819CEF3800010A549 /* Formal_Millen_TailoredDressShirt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Formal_Millen_TailoredDressShirt.png; sourceTree = "<group>"; };
 		1949622919CEF3800010A549 /* Wow_Millen_CowlNeckJumper_115.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wow_Millen_CowlNeckJumper_115.png; sourceTree = "<group>"; };
 		1949622A19CEF3800010A549 /* Wow_Millen_SuedeBikerJacket_499_c50417.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wow_Millen_SuedeBikerJacket_499_c50417.png; sourceTree = "<group>"; };
+		1949623219CEFDFD0010A549 /* colour-swatches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "colour-swatches.png"; sourceTree = "<group>"; };
 		19D3299019CDB93C00F6B927 /* WestfieldDecodedHackathon2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestfieldDecodedHackathon2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D3299419CDB93C00F6B927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19D3299519CDB93C00F6B927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		19D3299319CDB93C00F6B927 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1949623219CEFDFD0010A549 /* colour-swatches.png */,
 				1949622419CEF3800010A549 /* Casual_Millen_FluidShirtDress.png */,
 				1949622519CEF3800010A549 /* Casual_Millen_LeatherBiker_450.png */,
 				1949622619CEF3800010A549 /* Casual_Millen_LongLineGilet_.png */,
@@ -271,6 +274,7 @@
 				1949622D19CEF3800010A549 /* Casual_Millen_LongLineGilet_.png in Resources */,
 				1949622C19CEF3800010A549 /* Casual_Millen_LeatherBiker_450.png in Resources */,
 				19D329A319CDB93C00F6B927 /* LaunchScreen.xib in Resources */,
+				1949623319CEFDFD0010A549 /* colour-swatches.png in Resources */,
 				19D329A019CDB93C00F6B927 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
