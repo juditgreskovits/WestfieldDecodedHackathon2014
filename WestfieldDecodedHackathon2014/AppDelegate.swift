@@ -167,6 +167,7 @@ extension AppDelegate: CLLocationManagerDelegate {
                     return
                 }
                 lastProximity = nearestBeacon.proximity
+                var beaconID = MyBeaconIDModel.instance.setBeaconID(nearestBeacon.minor)
                 
                 switch nearestBeacon.proximity {
                 case CLProximity.Far:
