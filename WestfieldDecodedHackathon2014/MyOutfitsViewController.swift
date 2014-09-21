@@ -11,6 +11,8 @@ import UIKit
 class MyOutfitsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let kCellIdentifier: String = "OutfitCell"
+    
+    var imageCache = [String : UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,13 +37,23 @@ class MyOutfitsViewController: UIViewController, UITableViewDataSource, UITableV
         
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as UITableViewCell
         
-        let category = MyColoursModel.instance.categories[indexPath.row] // myColoursModel.getCategories()[indexPath.row]
+        var imageView = UIImageView(frame: CGRectMake(0,0,320,336))
+        var image = UIImage(named: "outfit_formal0")
+        imageView.image = image
+        // cell.backgroundView = imageView
+        // self.addSubView(imageView)
+        
+        /*imageCache["Bob"] = UIImage(named: "Bob.jpg")
+        
+        let imageOfBob = imageCache["Bob"]*/
+        
+        /*let category = MyColoursModel.instance.categories[indexPath.row] // myColoursModel.getCategories()[indexPath.row]
         cell.textLabel?.text = category.capitalizedString
         cell.detailTextLabel?.text = "Colours for my " + category + " outfits"
         
         // cell.imageView?.image = image
         
-        println(cell.textLabel?.text);
+        println(cell.textLabel?.text);*/
         
         return cell
     }
@@ -50,7 +62,7 @@ class MyOutfitsViewController: UIViewController, UITableViewDataSource, UITableV
         
         let targetHeight = self.view.frame.height/3
         
-        return 168
+        return 336
     }
     
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1949620919CE40EA0010A549 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1949620819CE40EA0010A549 /* MapViewController.swift */; };
+		1949620C19CE5DA60010A549 /* 103DT08394.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1949620A19CE5DA60010A549 /* 103DT08394.jpg */; };
+		1949620D19CE5DA60010A549 /* 104DT02906.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1949620B19CE5DA60010A549 /* 104DT02906.jpg */; };
 		19D3299619CDB93C00F6B927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3299519CDB93C00F6B927 /* AppDelegate.swift */; };
 		19D3299919CDB93C00F6B927 /* WestfieldDecodedHackathon2014.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19D3299719CDB93C00F6B927 /* WestfieldDecodedHackathon2014.xcdatamodeld */; };
 		19D3299B19CDB93C00F6B927 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3299A19CDB93C00F6B927 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		1949620819CE40EA0010A549 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1949620A19CE5DA60010A549 /* 103DT08394.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 103DT08394.jpg; path = Images.xcassets/Outfits.formal/103DT08394.jpg; sourceTree = "<group>"; };
+		1949620B19CE5DA60010A549 /* 104DT02906.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 104DT02906.jpg; path = Images.xcassets/Outfits.formal/104DT02906.jpg; sourceTree = "<group>"; };
 		19D3299019CDB93C00F6B927 /* WestfieldDecodedHackathon2014.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestfieldDecodedHackathon2014.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19D3299419CDB93C00F6B927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19D3299519CDB93C00F6B927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 		19D3299319CDB93C00F6B927 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1949620A19CE5DA60010A549 /* 103DT08394.jpg */,
+				1949620B19CE5DA60010A549 /* 104DT02906.jpg */,
 				726468D619CE4DE3005F1705 /* Default-568h@2x.png */,
 				19D3299419CDB93C00F6B927 /* Info.plist */,
 			);
@@ -226,9 +232,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				19D3299E19CDB93C00F6B927 /* Main.storyboard in Resources */,
+				1949620C19CE5DA60010A549 /* 103DT08394.jpg in Resources */,
 				726468D719CE4DE3005F1705 /* Default-568h@2x.png in Resources */,
 				19D329A319CDB93C00F6B927 /* LaunchScreen.xib in Resources */,
 				19D329A019CDB93C00F6B927 /* Images.xcassets in Resources */,
+				1949620D19CE5DA60010A549 /* 104DT02906.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
