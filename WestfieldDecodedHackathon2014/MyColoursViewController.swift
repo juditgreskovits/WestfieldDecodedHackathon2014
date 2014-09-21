@@ -39,9 +39,10 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         cell.textLabel?.text = category.capitalizedString
         cell.detailTextLabel?.text = "Colours for my " + category + " outfits"
         
-        var colour = MyColoursModel.instance.getColour(category, index: 2)
-        println(colour)
-        let image = createSwatch(colour)
+        var colour0 = MyColoursModel.instance.getColour(category, index: 0)
+        var colour1 = MyColoursModel.instance.getColour(category, index: 1)
+        var colour2 = MyColoursModel.instance.getColour(category, index: 2)
+        let image = createSwatch(colour0, colour1: colour1, colour2: colour2)
         
         cell.imageView?.image = image
         
@@ -74,25 +75,36 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         self.navigationController?.pushViewController(myOutfitsViewController, animated: true)
     }
     
-    func createSwatch(colour:UIColor) -> UIImage {
+    func createSwatch(colour0:UIColor, colour1:UIColor, colour2:UIColor) -> UIImage {
         
-        let rect = CGRectMake(0, 0, 100, 100)
+        let imageRect = CGRectMake(0, 0, 150, 50)
         
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: rect.width, height: rect.height), true, 0)
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: imageRect.width, height: imageRect.height), true, 0)
         
         let context = UIGraphicsGetCurrentContext()
         
-        println(colour.CGColor)
+        println(colour0.CGColor)
         
-        CGContextSetFillColorWithColor(context, colour.CGColor)
-        
-        CGContextFillRect(context, rect)
+        addColourToSwatch(0, context: context, colour: colour0)
+        addColourToSwatch(50, context: context, colour: colour1)
+        addColourToSwatch(100, context: context, colour: colour2)
         
         let image = UIGraphicsGetImageFromCurrentImageContext();
         
         UIGraphicsEndImageContext();
         
         return image
+    }
+    
+    func addColourToSwatch(offset:CGFloat, context:CGContext, colour:UIColor) {
+        
+        println(offset)
+        
+        let colourRect = CGRectMake(offset, 0, 50, 50)
+        
+        CGContextSetFillColorWithColor(context, colour.CGColor)
+        
+        CGContextFillRect(context, colourRect)
     }
     
 
