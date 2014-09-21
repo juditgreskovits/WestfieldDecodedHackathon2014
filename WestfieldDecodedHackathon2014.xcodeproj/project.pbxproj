@@ -24,6 +24,7 @@
 		19D329C719CE134300F6B927 /* OutfitVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D329C619CE134300F6B927 /* OutfitVO.swift */; };
 		726468CF19CDC7B7005F1705 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726468CE19CDC7B7005F1705 /* CoreLocation.framework */; };
 		726468D719CE4DE3005F1705 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 726468D619CE4DE3005F1705 /* Default-568h@2x.png */; };
+		726468D919CE6572005F1705 /* crap.png in Resources */ = {isa = PBXBuildFile; fileRef = 726468D819CE6572005F1705 /* crap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		19D329C619CE134300F6B927 /* OutfitVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutfitVO.swift; sourceTree = "<group>"; };
 		726468CE19CDC7B7005F1705 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		726468D619CE4DE3005F1705 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		726468D819CE6572005F1705 /* crap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		19D3299319CDB93C00F6B927 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				726468D819CE6572005F1705 /* crap.png */,
 				1949620A19CE5DA60010A549 /* 103DT08394.jpg */,
 				1949620B19CE5DA60010A549 /* 104DT02906.jpg */,
 				726468D619CE4DE3005F1705 /* Default-568h@2x.png */,
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				726468D919CE6572005F1705 /* crap.png in Resources */,
 				19D3299E19CDB93C00F6B927 /* Main.storyboard in Resources */,
 				1949620C19CE5DA60010A549 /* 103DT08394.jpg in Resources */,
 				726468D719CE4DE3005F1705 /* Default-568h@2x.png in Resources */,
