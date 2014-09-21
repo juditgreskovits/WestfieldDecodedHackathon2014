@@ -21,6 +21,7 @@
 		19D329C119CDEF4100F6B927 /* MyColoursModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D329C019CDEF4100F6B927 /* MyColoursModel.swift */; };
 		19D329C719CE134300F6B927 /* OutfitVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D329C619CE134300F6B927 /* OutfitVO.swift */; };
 		726468CF19CDC7B7005F1705 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726468CE19CDC7B7005F1705 /* CoreLocation.framework */; };
+		726468D719CE4DE3005F1705 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 726468D619CE4DE3005F1705 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		19D329C019CDEF4100F6B927 /* MyColoursModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColoursModel.swift; sourceTree = "<group>"; };
 		19D329C619CE134300F6B927 /* OutfitVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutfitVO.swift; sourceTree = "<group>"; };
 		726468CE19CDC7B7005F1705 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		726468D619CE4DE3005F1705 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		19D3299319CDB93C00F6B927 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				726468D619CE4DE3005F1705 /* Default-568h@2x.png */,
 				19D3299419CDB93C00F6B927 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19D3299E19CDB93C00F6B927 /* Main.storyboard in Resources */,
+				726468D719CE4DE3005F1705 /* Default-568h@2x.png in Resources */,
 				19D329A319CDB93C00F6B927 /* LaunchScreen.xib in Resources */,
 				19D329A019CDB93C00F6B927 /* Images.xcassets in Resources */,
 			);
