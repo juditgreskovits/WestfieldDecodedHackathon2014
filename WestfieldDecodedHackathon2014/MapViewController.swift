@@ -7,13 +7,31 @@
 //
 
 import UIKit
+import CoreLocation
 
 class MapViewController: UIViewController {
+    var beacons: [CLBeacon]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NSLog("Checking Beacons exists")
+//        if(beacons == nil) {
+//            return
+//        }
+
+        let beacon:CLBeacon = beacons![0]
+//        let beaconID: Int = beacon.minor
+        var message:String = "beaconID: " + beacon.minor.stringValue
+    
+        NSLog(message)
+        
         // Do any additional setup after loading the view.
+        NSLog("image loader")
+        var imageView = UIImageView(frame: CGRectMake(0,0,320,568))
+        var image = UIImage(named: "map1")
+        imageView.image = image
+        self.view.addSubview(imageView)
     }
 
     override func didReceiveMemoryWarning() {
