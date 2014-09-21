@@ -77,14 +77,24 @@ class ChooseMyColoursViewController: UIViewController, AVCaptureVideoDataOutputS
         
         captureSession.startRunning()
         
-        /*dispatch_after(200, dispatch_get_main_queue(), {
-            self.captureSession.stopRunning()
-            self.navigateToMyColoursViewController()
-        })*/
+        delay(4.0, navigateToMyColoursViewController);
+    }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
     
     func navigateToMyColoursViewController() {
+        self.captureSession.stopRunning()
+        
         let myColoursViewController = self.storyboard?.instantiateViewControllerWithIdentifier("myColoursViewController") as MyColoursViewController
+        println(self)
+        println(myColoursViewController)
         self.navigationController?.pushViewController(myColoursViewController, animated: true)
     }
     
