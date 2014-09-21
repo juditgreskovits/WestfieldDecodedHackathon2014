@@ -10,26 +10,26 @@ import UIKit
 import CoreLocation
 
 class MapViewController: UIViewController {
+    //    var beacons: [CLBeacon]?
+//    @IBOutlet var tableView: UITableView?
 //    var beacons: [CLBeacon]?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        NSLog("Checking Beacons exists")
-//        if(beacons == nil) {
-//            return
-//        }
-//
-//        let beacon:CLBeacon = beacons![0]
-////        let beaconID: Int = beacon.minor
-//        var message:String = "beaconID: " + beacon.minor.stringValue
-    
-//        NSLog(message)
         
         // Do any additional setup after loading the view.
+        
+//        let aSelector : Selector = "updateTime"
+//        var selfTimer: NSTimer = NSTimer(timeInterval: 1, target: self, selector: aSelector, userInfo: nil, repeats: true)
+//        
         NSLog("image loader")
+        
+        let beaconID = MyBeaconIDModel.instance.getBeaconID()
+        var mapName:String = "map" + String(beaconID)
+        NSLog(mapName)
+        
         var imageView = UIImageView(frame: CGRectMake(0,0,320,568))
-        var image = UIImage(named: "crap")
+        var image = UIImage(named: mapName)
         imageView.image = image
         self.view.addSubview(imageView)
     }
