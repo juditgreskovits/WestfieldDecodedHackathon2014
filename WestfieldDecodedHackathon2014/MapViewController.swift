@@ -16,9 +16,9 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         NSLog("Checking Beacons exists")
-//        if(beacons == nil) {
-//            return
-//        }
+        if(beacons == nil) {
+            return
+        }
 
         let beacon:CLBeacon = beacons![0]
 //        let beaconID: Int = beacon.minor
