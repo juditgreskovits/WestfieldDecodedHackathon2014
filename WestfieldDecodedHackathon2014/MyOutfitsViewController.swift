@@ -8,7 +8,9 @@
 
 import UIKit
 
-class MyOutfitsViewController: UIViewController {
+class MyOutfitsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    let kCellIdentifier: String = "OutfitCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,34 @@ class MyOutfitsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 3
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        // let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCategoryColours")
+        
+        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as UITableViewCell
+        
+        let category = MyColoursModel.instance.categories[indexPath.row] // myColoursModel.getCategories()[indexPath.row]
+        cell.textLabel?.text = category.capitalizedString
+        cell.detailTextLabel?.text = "Colours for my " + category + " outfits"
+        
+        // cell.imageView?.image = image
+        
+        println(cell.textLabel?.text);
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        let targetHeight = self.view.frame.height/3
+        
+        return 168
     }
     
 
