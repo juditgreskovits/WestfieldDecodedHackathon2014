@@ -35,6 +35,9 @@ class MyOutfitsViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCategoryColours")
         
+        tableView.backgroundColor = UIColor.clearColor()
+        tableView.opaque = false
+        
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as UITableViewCell
         
         var imageView = UIImageView(frame: CGRectMake(0,0,320,336))
