@@ -31,27 +31,34 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCategoryColours")
+        
+        tableView.separatorInset = UIEdgeInsetsZero
         
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as UITableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         
         let category = MyColoursModel.instance.categories[indexPath.row] // myColoursModel.getCategories()[indexPath.row]
-        cell.textLabel?.text = category.capitalizedString
-        cell.detailTextLabel?.text = "Colours for my " + category + " outfits"
+        /*cell.textLabel?.text = category.capitalizedString
+        cell.detailTextLabel?.text = "Colours for my " + category + " outfits"*/
+        
+        (cell.viewWithTag(100) as UILabel).text = "Colours for my " + category + " outfits" //category.capitalizedString
+        // (cell.viewWithTag(101) as UILabel).text = "Colours for my " + category + " outfits"
         
         var colour0 = MyColoursModel.instance.getColour(category, index: 0)
         var colour1 = MyColoursModel.instance.getColour(category, index: 1)
         var colour2 = MyColoursModel.instance.getColour(category, index: 2)
         let image = createSwatch(colour0, colour1: colour1, colour2: colour2)
         
-        cell.imageView?.image = image
+        // cell.imageView?.image = image
+        
+        (cell.viewWithTag(102) as UIImageView).image = image
         
         println(cell.textLabel?.text);
         
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    /*func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         let targetHeight = self.view.frame.height/3
         
@@ -63,7 +70,7 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         let targetWidth = self.view.frame.width
         
         return targetWidth
-    }
+    }*/
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // Get the row data for the selected row
@@ -77,7 +84,7 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
     
     func createSwatch(colour0:UIColor, colour1:UIColor, colour2:UIColor) -> UIImage {
         
-        let imageRect = CGRectMake(0, 0, 150, 50)
+        let imageRect = CGRectMake(0, 0, 210, 70)
         
         UIGraphicsBeginImageContextWithOptions(CGSize(width: imageRect.width, height: imageRect.height), true, 0)
         
@@ -86,8 +93,8 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         println(colour0.CGColor)
         
         addColourToSwatch(0, context: context, colour: colour0)
-        addColourToSwatch(50, context: context, colour: colour1)
-        addColourToSwatch(100, context: context, colour: colour2)
+        addColourToSwatch(70, context: context, colour: colour1)
+        addColourToSwatch(140, context: context, colour: colour2)
         
         let image = UIGraphicsGetImageFromCurrentImageContext();
         
@@ -100,7 +107,7 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         
         println(offset)
         
-        let colourRect = CGRectMake(offset, 0, 50, 50)
+        let colourRect = CGRectMake(offset, 0, 70, 70)
         
         CGContextSetFillColorWithColor(context, colour.CGColor)
         

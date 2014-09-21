@@ -9,9 +9,14 @@
 import Foundation
 
 class OutfitVO {
+
+    var store = "Desigual"
+    var image = "image.jpg"
+    var colour = "red"
+    var price = "£76"
     
-    let store = "Desigual"
-    let imagePath = "image.jpg"
-    let colour = "red"
-    let price = "£76"
+    init(_image:String, _store:String) {
+        image = _image
+        store = _store
+    }
 }

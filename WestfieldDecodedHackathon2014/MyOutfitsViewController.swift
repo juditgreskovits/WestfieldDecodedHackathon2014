@@ -29,34 +29,36 @@ class MyOutfitsViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        return MyColoursModel.instance.getOutfits().count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCategoryColours")
         
+        tableView.separatorInset = UIEdgeInsetsZero
         tableView.backgroundColor = UIColor.clearColor()
         tableView.opaque = false
         
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as UITableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.backgroundColor = MyColoursModel.instance.getOutfitBackgroundColour() //UIColor.clearColor() // f1f1f1
+        cell.opaque = false
         
-        var imageView = UIImageView(frame: CGRectMake(0,0,320,336))
-        var image = UIImage(named: "outfit_formal0")
-        imageView.image = image
-        // cell.backgroundView = imageView
-        // self.addSubView(imageView)
+        let outfitVO = MyColoursModel.instance.getOutfits()[indexPath.row]
         
-        /*imageCache["Bob"] = UIImage(named: "Bob.jpg")
+        println(outfitVO.image)
         
-        let imageOfBob = imageCache["Bob"]*/
+        // cell.textLabel?.text = "hello"
         
-        /*let category = MyColoursModel.instance.categories[indexPath.row] // myColoursModel.getCategories()[indexPath.row]
-        cell.textLabel?.text = category.capitalizedString
-        cell.detailTextLabel?.text = "Colours for my " + category + " outfits"
+        // let outfitImageView = cell.viewWithTag(100) as UIImageView
         
+        let image = UIImage(named: outfitVO.image)
+        // let imageView = UIImageView(frame: CGRectMake(0, 0, image.size.width, image.size.height))
+        let imageView = cell.viewWithTag(100) as UIImageView
         // cell.imageView?.image = image
+        imageView.image = image
         
-        println(cell.textLabel?.text);*/
+        var text = cell.viewWithTag(101) as UITextField
+        text.text = outfitVO.store
         
         return cell
     }
@@ -66,6 +68,14 @@ class MyOutfitsViewController: UIViewController, UITableViewDataSource, UITableV
         let targetHeight = self.view.frame.height/3
         
         return 336
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // Get the row data for the selected row
+        MyColoursModel.instance.selectOutfit(indexPath.row)
+        
+        let mapViewController = self.storyboard?.instantiateViewControllerWithIdentifier("mapViewController") as MapViewController
+        self.navigationController?.pushViewController(mapViewController, animated: true)
     }
     
 

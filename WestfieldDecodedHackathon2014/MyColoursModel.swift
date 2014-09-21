@@ -14,7 +14,8 @@ class MyColoursModel {
         return MyColoursModelInstance
     }
     
-    var outfits = [OutfitVO(), OutfitVO(), OutfitVO()]
+    var outfits = [OutfitVO(_image: "outfit_formal0", _store:"Karen Millen"), OutfitVO(_image: "outfit_formal1", _store:"All Saints"), OutfitVO(_image: "outfit_formal2", _store:"Karen Millen"), OutfitVO(_image: "outfit_formal3", _store:"Karen Millen"), OutfitVO(_image: "outfit_formal4", _store:"All Saints"), OutfitVO(_image: "outfit_formal5", _store:"Karen Millen"), OutfitVO(_image: "outfit_formal6", _store:"Desigual"), OutfitVO(_image: "outfit_formal7", _store:"Karen Millen")]
+    
     
     let categories = ["formal", "casual", "wow"]
     
@@ -55,15 +56,18 @@ class MyColoursModel {
     }
     
     func getOutfits() -> Array<OutfitVO> {
-        
         selectedOutfits = []
+        selectedOutfits = outfits
         
-        
-        return outfits
+        return selectedOutfits
     }
     
     func selectOutfit(index:Int) {
         selectedOutfit = selectedOutfits[index]
+    }
+    
+    func getOutfitBackgroundColour() -> UIColor {
+        return UIColor.initWithRGBHex(0xF1F1F1)
     }
 }
 
