@@ -41,7 +41,7 @@ class MyColoursViewController: UIViewController, UITableViewDataSource, UITableV
         /*cell.textLabel?.text = category.capitalizedString
         cell.detailTextLabel?.text = "Colours for my " + category + " outfits"*/
         
-        (cell.viewWithTag(100) as UILabel).text = "Colours for my " + category + " outfits" //category.capitalizedString
+        (cell.viewWithTag(100) as UILabel).text = category.capitalizedString + ": colours for my " + category + " outfits" //category.capitalizedString
         // (cell.viewWithTag(101) as UILabel).text = "Colours for my " + category + " outfits"
         
         var colour0 = MyColoursModel.instance.getColour(category, index: 0)

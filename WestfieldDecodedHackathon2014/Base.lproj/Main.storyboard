@@ -146,7 +146,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Based on my skintone, these are the colours that make me look best!" translatesAutoresizingMaskIntoConstraints="NO" id="4pA-3m-6RH">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Based on my skintone, these are the colours that make me look best!" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pA-3m-6RH">
                                 <rect key="frame" x="3" y="100" width="303" height="76"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
